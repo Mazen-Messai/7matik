@@ -6,11 +6,11 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      contextIsolation: false, // pas de preload pour l’instant
+      contextIsolation: false,
     },
   });
 
-  win.loadFile('dist/index.html'); // Vite compile ici
+  win.loadURL('http://localhost:5173/')
 }
 
 app.whenReady().then(createWindow);
