@@ -63,3 +63,22 @@ canvas.addEventListener("drop", (e) => {
   layer.add(node);
   layer.draw();
 });
+
+// Dynamically resizing the canvas when the window is resized
+function resizeCanvas() {
+  const canvasDiv = document.getElementById('canvas')!;
+  const rect = canvasDiv.getBoundingClientRect();
+
+  stage.width(rect.width);
+  stage.height(rect.height);
+  stage.draw();
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+document.getElementById('toggle-library')?.addEventListener('click', () => {
+  const lib = document.getElementById('library')!;
+  lib.style.display = lib.style.display === 'none' ? 'flex' : 'none';
+  resizeCanvas();
+});
