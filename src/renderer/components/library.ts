@@ -11,21 +11,28 @@ export const libraryItems: LibraryItem[] = [
     id: 'atem',
     name: 'ATEM Mini',
     category: 'Switcher',
-    inputs: ['HDMI 1', 'HDMI 2'],
-    outputs: ['HDMI OUT']
+    inputs: ['HDMI', 'HDMI'],
+    outputs: ['HDMI']
+  },
+  {
+    id: 'BM Converter',
+    name: 'Blackmagic Converter',
+    category: 'Converter',
+    inputs: ['SDI'],
+    outputs: ['HDMI']
   },
   {
     id: 'fx6',
     name: 'Sony FX6',
     category: 'Camera',
-    inputs: [],
-    outputs: ['SDI OUT']
+    inputs: ['XLR'],
+    outputs: ['SDI']
   },
   {
     id: 'mic',
     name: 'Neumann U87',
     category: 'Mic',
     inputs: [],
-    outputs: ['XLR OUT']
+    outputs: ['XLR']
   }
 ];

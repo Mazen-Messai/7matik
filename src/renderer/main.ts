@@ -1,4 +1,3 @@
-alert("from main.ts");
 import Konva from "konva";
 import { libraryItems } from "./components/library";
 import { createDeviceNode } from "./canvas/devicenode";
