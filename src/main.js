@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var device_1 = require("./device");
+var cable_1 = require("./cable");
+var connector_1 = require("./connector");
+var category_1 = require("./category");
+var cam = new device_1.Device("Cam 1", category_1.Category.CAMERA, [], [connector_1.Connector.HDMI]);
+var mon = new device_1.Device("Monitor 1", category_1.Category.DISPLAY, [connector_1.Connector.HDMI], []);
+var cable = new cable_1.Cable("HDMI Cable", connector_1.Connector.HDMI, cam, mon);
+console.log("".concat(cable.getName(), " connects ").concat(cable.getSource().getName(), " to ").concat(cable.getTarget().getName()));
